@@ -1,0 +1,31 @@
+.achievements {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 38px;
+  }
+
+  &__item {
+    @include flex-align-center(14);
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #F4F4F4;
+    background: #FFF;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  &__text {
+    color: #4A4A4A;
+    font-family: $inter;
+    font-weight: 600;
+    font-size: 22px;
+    max-width: 200px;
+  }
+
+  &__logos {
+    @include flex-align-center(35);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

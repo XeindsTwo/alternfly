@@ -1,0 +1,25 @@
+@import 'vendor/reset';
+@import 'vendor/fonts';
+@import 'vendor/vars';
+@import 'vendor/libs';
+@import 'vendor/mixin';
+@import 'vendor/global';
+
+@import "components/header";
+@import "components/footer";
+@import "components/title-section";
+@import "components/form-elements";
+@import "components/btn";
+@import "components/cta";
+@import "components/benefits-section";
+@import "components/banner";
+
+@import "home/home";
+@import "home/how-works";
+@import "home/how-choose";
+@import "home/reviews";
+
+@import "pages/about/about-company";
+@import "pages/about/achievements";
+
+@import "pages/how-works/steps";

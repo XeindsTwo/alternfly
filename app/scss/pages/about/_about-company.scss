@@ -1,0 +1,70 @@
+.about-company {
+  &__title {
+    font-size: 68px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &__subtext {
+    max-width: 460px;
+    font-weight: 500;
+    color: #969696;
+    margin: 0 auto 80px;
+    text-align: center;
+  }
+
+  &__banner {
+    padding: 70px 0 70px 36px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 1px solid #F0F0F0;
+    background: linear-gradient(125deg, rgba(225, 224, 222, 0.15) 9.11%, rgba(231, 228, 226, 0.15) 90.89%);
+  }
+
+  &__content {
+    max-width: 760px;
+    position: relative;
+    z-index: 11;
+  }
+
+  &__subtitle {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: $inter;
+    background: linear-gradient(92deg, rgba(61, 61, 61, 0.50) 23.65%, rgba(121, 121, 121, 0.50) 76.35%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    color: #4A4A4A;
+    font-family: $inter;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.18;
+    margin-bottom: 32px;
+  }
+
+  &__mission {
+    font-weight: 500;
+    max-width: 560px;
+    line-height: 1.35;
+  }
+
+  &__decor {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+  }
+
+  &__people {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+}

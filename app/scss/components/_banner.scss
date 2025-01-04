@@ -1,0 +1,59 @@
+.banner {
+  &__inner {
+    @include bg;
+    border-radius: 24px;
+    padding: 74px 36px;
+  }
+
+  &__title {
+    font-family: $inter;
+    font-size: 64px;
+    font-weight: 700;
+    max-width: 490px;
+    margin-bottom: 28px;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 0.64px;
+  }
+
+  &__content {
+    max-width: 540px;
+    padding: 28px;
+    border-radius: 14.25px;
+    background: linear-gradient(125deg, rgba(175, 157, 136, 0.46) 9.11%, rgba(175, 158, 140, 0.50) 90.89%);
+    box-shadow: 0 3px 3px 0 rgba(255, 255, 255, 0.25) inset;
+    backdrop-filter: blur(10.800000190734863px);
+  }
+
+  &__head {
+    @include flex-align-center(12);
+    margin-bottom: 28px;
+  }
+
+  &__avatar {
+    @include objectCoverBg;
+    border-radius: 50%;
+  }
+
+  &__info {
+    @include flex-column(3);
+    line-height: 1.2;
+  }
+
+  &__name {
+    color: $white;
+  }
+
+  &__from {
+    color: rgba($white, .6);
+    font-weight: 500;
+  }
+
+  &__text {
+    color: $white;
+    font-weight: 500;
+    font-size: 22px;
+    max-width: 370px;
+    line-height: 1.4;
+  }
+}

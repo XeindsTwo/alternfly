@@ -1,0 +1,100 @@
+.reviews {
+  &__card {
+    cursor: grab;
+    padding: 36px;
+    min-height: 100%;
+    border-radius: 19px;
+    background: linear-gradient(125deg, rgba(225, 224, 222, 0.25) 9.11%, rgba(231, 228, 226, 0.25) 90.89%);
+    box-shadow: 0 4px 4px 0 rgba(255, 255, 255, 0.25) inset;
+  }
+
+  &__head {
+    @include flex-align-center(13);
+    margin-bottom: 32px;
+  }
+
+  &__info {
+    @include flex-column(2);
+    font-size: 18px;
+  }
+
+  &__from {
+    color: #4A4A4A;
+    font-family: $inter;
+    font-weight: 500;
+  }
+
+  &__address {
+    font-weight: 500;
+    color: #7A7A7A;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 20px;
+    color: #3E3E3E;
+  }
+
+  .swiper-wrapper {
+    box-sizing: border-box;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  &__navigation {
+    @include flex-align-center(8);
+    @media (max-width: 515px) {
+      display: none;
+    }
+
+    &.bottom {
+      margin-bottom: 25px;
+    }
+
+    &.none {
+      display: none;
+      @include r($lg) {
+        display: flex;
+        margin-bottom: 25px;
+      }
+      @media (max-width: 515px) {
+        display: none;
+      }
+    }
+  }
+
+  &__btn {
+    @include flex-center;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    border: 1px solid transparent;
+    background-color: $accent;
+    transition: all .4s;
+
+    &.swiper-button-disabled {
+      opacity: .4;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    &:hover {
+      background-color: #faa160;
+
+      svg path {
+        fill: $white;
+      }
+    }
+
+    &:focus {
+      background-color: transparent;
+      border-color: $accent;
+
+      svg path {
+        fill: #181818;
+      }
+    }
+  }
+}

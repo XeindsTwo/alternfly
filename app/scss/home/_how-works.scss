@@ -1,0 +1,36 @@
+.how-works {
+  &__items {
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    padding: 55px 20px 40px;
+    @include flex-center;
+    justify-content: flex-start;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 19px;
+    border: 1px solid #F5F1ED;
+    background: linear-gradient(180deg, rgba(255, 249, 245, 0.98) 0%, rgba(255, 253, 251, 0.98) 100%);
+  }
+
+  &__img {
+    margin-bottom: 65px;
+  }
+
+  &__name {
+    color: #4A4A4A;
+    font-weight: 500;
+    font-size: 28px;
+    font-family: $inter;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 380px;
+  }
+}

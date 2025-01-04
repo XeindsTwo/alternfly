@@ -1,0 +1,16 @@
+@include('components/_head.html', {
+title: 'AlternaFly | How It Works'
+})
+
+@include('components/_header.html')
+<main class="main">
+  <div class="container">
+    <h1 class="steps__title title-section">How AlternaFly Works</h1>
+    <p class="steps__subtext">Your simple and affordable way to travel</p>
+  </div>
+  @include('how-works/_steps.html')
+  @include('how-works/_benefits-section.html')
+  @include('how-works/_banner.html')
+</main>
+@include('components/_footer.html')
+<script src="js/main.min.js" type="module"></script>

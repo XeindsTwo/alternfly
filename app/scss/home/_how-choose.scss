@@ -1,0 +1,44 @@
+.why-choose {
+  &__items {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__item {
+    padding: 40px 32px 34px;
+    border-radius: 19px;
+    border: 1px solid #F4F4F4;
+    background: #FFF;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  &__icon {
+    @include flex-center;
+    background-color: #F7F5F3;
+    border-radius: 11px;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 24px;
+  }
+
+  &__name {
+    font-family: $inter;
+    font-size: 26px;
+    color: #4A4A4A;
+    margin-bottom: 24px;
+
+    &.short {
+      max-width: 216px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    line-height: 1.2;
+
+    &.short {
+      max-width: 216px;
+    }
+  }
+}

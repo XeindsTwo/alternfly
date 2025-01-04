@@ -1,0 +1,32 @@
+.cta {
+  &__content {
+    @include flex-column(0);
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin: 0 auto 24px;
+  }
+
+  &__text {
+    max-width: 480px;
+    margin: 0 auto 24px;
+    font-weight: 500;
+  }
+
+  &__btn {
+    max-width: 345px;
+    width: 100%;
+    font-weight: 700;
+    padding: 16px;
+  }
+
+  &__subtext {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
