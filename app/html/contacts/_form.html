@@ -1,0 +1,44 @@
+<section class="contacts-form indent">
+  <div class="container">
+    <form class="contacts-form__inner" method="post">
+      <h2 class="title-section title-section--center">Send Us a Message</h2>
+      <div class="contacts-form__top">
+        <label>
+          <input class="input" type="text" name="name" id="name" required maxlength="255" placeholder="Enter name">
+        </label>
+        <label>
+          <input class="input" type="email" name="email" id="email" required maxlength="255" placeholder="Enter email">
+        </label>
+      </div>
+      <div class="contacts-form__bottom">
+        <label class="contacts-form__left">
+          <input class="input" type="text" name="subject" id="subject" required maxlength="255" placeholder="Enter subject">
+        </label>
+        <div class="contacts-form__selectors">
+          <button class="contacts-form__btn" type="button" data-content="general_inquiry">
+            <span>General Inquiry</span>
+          </button>
+          <button class="contacts-form__btn" type="button" data-content="booking_issue">
+            <span>Booking Issue</span>
+          </button>
+          <button class="contacts-form__btn active" type="button" data-content="refund_request">
+            <span>Refund Request</span>
+          </button>
+          <button class="contacts-form__btn" type="button" data-content="other">
+            <span>Other</span>
+          </button>
+        </div>
+      </div>
+      <label>
+        <textarea class="input textarea" name="message" id="message" required minlength="60" maxlength="1500"
+                  placeholder="Enter message"></textarea>
+      </label>
+      <div class="contacts-form__send">
+        <button class="contacts-form__send-btn btn" type="submit">
+          <span>Send Message</span>
+        </button>
+        <p>Our team will respond within 24 hours</p>
+      </div>
+    </form>
+  </div>
+</section>

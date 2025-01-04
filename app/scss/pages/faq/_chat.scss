@@ -1,0 +1,24 @@
+.chat {
+  &__inner {
+    @include flex-between-center-gap(30);
+    margin: 0 60px;
+  }
+
+  &__content {
+    @include flex-column(32);
+    align-items: flex-start;
+    max-width: 560px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-family: $inter;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #3D3D3D;
+  }
+
+  &__link {
+    min-width: 280px;
+  }
+}

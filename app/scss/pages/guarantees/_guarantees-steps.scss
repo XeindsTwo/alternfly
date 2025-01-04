@@ -1,0 +1,58 @@
+.guarantees-steps {
+  &__items {
+    @include flex-column(20);
+  }
+
+  &__top, &__bottom {
+    display: grid;
+    grid-gap: 20px;
+  }
+
+  &__top {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__card {
+    padding: 32px 36px 48px;
+    border-radius: 19px;
+    border: 1px solid #F5F1ED;
+    background: linear-gradient(180deg, rgba(255, 249, 245, 0.98) 0%, rgba(255, 253, 251, 0.98) 100%);
+  }
+
+  &__icon {
+    margin-bottom: 28px;
+  }
+
+  &__name {
+    font-size: 32px;
+    font-family: $inter;
+    font-weight: 500;
+    color: #4A4A4A;
+    max-width: 260px;
+    margin-bottom: 24px;
+
+    &.long {
+      max-width: 310px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+
+    &.short {
+      max-width: 285px;
+    }
+
+    &.middle {
+      max-width: 330px;
+    }
+
+    &.long {
+      max-width: 500px;
+    }
+  }
+}

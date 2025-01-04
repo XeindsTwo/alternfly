@@ -1,0 +1,44 @@
+.contacts-data {
+  &__inner {
+    @include flex-between-center-gap(30);
+    padding: 44px 36px;
+  }
+
+  &__title {
+    font-size: 44px;
+    font-family: $inter;
+    font-weight: 700;
+    color: #3D3D3D;
+  }
+
+  &__items {
+    @include flex-align-center(140);
+  }
+
+  &__item {
+    @include flex-column(12);
+  }
+
+  &__label {
+    font-weight: 500;
+  }
+
+  &__link {
+    color: #4A4A4A;
+    font-weight: 600;
+    font-size: 19px;
+    padding: 1px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: color .4s, border .4s;
+
+    &:hover {
+      color: $orange100;
+    }
+
+    &:focus {
+      border-color: $orange100;
+      color: #e59404;
+    }
+  }
+}

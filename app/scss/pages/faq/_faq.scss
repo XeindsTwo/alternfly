@@ -1,0 +1,108 @@
+.faq {
+  &__inner {
+    padding: 44px 36px;
+    border-radius: 28px;
+    background: linear-gradient(125deg, rgba(189, 189, 189, 0.10) 9.11%, rgba(156, 156, 156, 0.10) 90.89%);
+  }
+
+  &__subtext {
+    font-size: 18px;
+    color: rgba($white, .6);
+    @media (max-width: 540px) {
+      font-size: 16px;
+      max-width: 320px;
+    }
+
+    a {
+      border: 1px solid transparent;
+      border-bottom: 1px solid rgba($white, .6);
+      padding: 1px;
+      transition: color .4s, border-radius .4s, border .4s;
+
+      &:hover {
+        color: $accent;
+        border-bottom-color: $accent;
+      }
+
+      &:focus {
+        border-color: $accent;
+        border-radius: 5px;
+        color: $white;
+      }
+    }
+  }
+
+  &__list {
+    @include flex-column(20);
+  }
+
+  &__head {
+    @include flex-between-center-gap(20);
+    cursor: pointer;
+    padding: 23px 25px;
+    color: #4A4A4A;
+    position: relative;
+    border-radius: 15px;
+    border: 1px solid $orange100;
+    background: linear-gradient(90deg, #FCFBFA 4.1%, #F9F8F7 95.9%);
+
+    &:hover {
+      color: $orange100;
+    }
+
+    &--active {
+      .faq__btn {
+        transform: rotate(180deg);
+
+        svg path {
+          fill: $orange100;
+        }
+      }
+    }
+  }
+
+  &__name {
+    font-family: $inter;
+    font-size: 22px;
+    font-weight: 500;
+    transition: color .4s;
+    @include r($sm) {
+      font-size: 18px;
+    }
+    @include r($phone) {
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    @include flex-center;
+    transition: transform .4s;
+  }
+
+  &__body {
+    border-radius: 15px;
+    border: 1px solid #F5F1ED;
+    background: $white;
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+    transition: max-height 0.6s ease-out, opacity 0.6s ease-out, margin .4s;
+    opacity: 0;
+
+    &--active {
+      max-height: 1000px;
+      margin-top: 12px;
+      opacity: 1;
+      user-select: auto;
+      pointer-events: auto;
+    }
+  }
+
+  &__text {
+    padding: 24px 25px;
+    font-weight: 500;
+    color: #7A7A7A;
+    letter-spacing: -0.18px;
+  }
+}

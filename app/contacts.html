@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta http-equiv="content-type" content="public, max-age=3600">
   <meta name="theme-color" content="#fff">
-  <title>AlternaFly | How It Works</title>
+  <title>AlternaFly | Contact Us</title>
   <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -68,69 +68,82 @@
 </header>
 <main class="main">
   <div class="container">
-    <h1 class="steps__title title-section">How AlternaFly Works</h1>
-    <p class="steps__subtext">Your simple and affordable way to travel</p>
+    <h1 class="steps__title title-section">Contact Us</h1>
+    <p class="steps__subtext">We’re here to help, 24/7</p>
   </div>
-  <section class="steps indent">
+  <div class="contacts-data indent">
   <div class="container">
-    <h2 class="title-section title-section--center">Just 3 Simple Steps</h2>
-    <ul class="steps__cards">
-      <li class="steps__card">
-        <img class="steps__icon" src="images/icons/steps/1.svg" width="72" height="72" alt="steps icon decor">
-        <h3 class="steps__name">Submit Your Request</h3>
-        <p class="steps__text short">
-          Fill out a simple form with your travel details: destination, dates, and preferences
-        </p>
-      </li>
-      <li class="steps__card">
-        <img class="steps__icon" src="images/icons/steps/2.svg" width="72" height="72" alt="steps icon decor">
-        <h3 class="steps__name">We Find the Best Options</h3>
-        <p class="steps__text">
-          Our specialists manually select the best flights with up to 30% savings. These discounts come from exclusive
-          airline contracts, bulk purchasing agreements, and hidden fares that are typically unavailable to the public.
-          For example, we collaborate directly with airlines to access wholesale prices and secure deals often reserved
-          for corporate clients.
-        </p>
-      </li>
-      <li class="steps__card">
-        <img class="steps__icon" src="images/icons/steps/3.svg" width="72" height="72" alt="steps icon decor">
-        <h3 class="steps__name">Receive Your Ticket</h3>
-        <p class="steps__text middle">
-          Pay and receive your e-ticket in your inbox within 24 hours.
-          Our system ensures every booking is secure and hassle-free
-        </p>
-      </li>
-    </ul>
+    <div class="contacts-data__inner">
+      <p class="contacts-data__title">Reach Out to Us:</p>
+      <ul class="contacts-data__items">
+        <li class="contacts-data__item">
+          <p class="contacts-data__label">Email:</p>
+          <a class="contacts-data__link" href="mailto:support@alternafly.com">support@alternafly.com</a>
+        </li>
+        <li class="contacts-data__item">
+          <p class="contacts-data__label">Office address:</p>
+          <a class="contacts-data__link" href="#" target="_blank">200 Park Avenue, New York, NY, USA</a>
+        </li>
+      </ul>
+    </div>
   </div>
-</section>
-  <section class="benefits-section indent">
+</div>
+  <section class="contacts-form indent">
   <div class="container">
-    <h2 class="title-section title-section--center">Why Choose AlternaFly?</h2>
-    <ul class="benefits-section__list">
-      <li class="benefits-section__item primary">Personalized Service</li>
-      <li class="benefits-section__item">Exclusive Discounts</li>
-      <li class="benefits-section__item">Transparent Pricing</li>
-      <li class="benefits-section__item">Fast and Reliable</li>
-      <li class="benefits-section__item">Proven Savings</li>
-    </ul>
-  </div>
-</section>
-  <section class="banner indent">
-  <div class="container">
-    <div class="banner__inner" style="background-image: url('images/banner/1.png')">
-      <h2 class="banner__title">Your journey begins with us</h2>
-      <div class="banner__content">
-        <div class="banner__head">
-          <img class="banner__avatar" src="images/avatars/7.png" width="54" height="54" alt="Emily T.">
-          <div class="banner__info">
-            <p class="banner__name">From: Emily T.</p>
-            <p class="banner__from">City: New York</p>
-          </div>
-        </div>
-        <p class="banner__text">
-          Thanks to AlternaFly, I saved $400 on my dream trip to the Himalayas!
-        </p>
+    <form class="contacts-form__inner" method="post">
+      <h2 class="title-section title-section--center">Send Us a Message</h2>
+      <div class="contacts-form__top">
+        <label>
+          <input class="input" type="text" name="name" id="name" required maxlength="255" placeholder="Enter name">
+        </label>
+        <label>
+          <input class="input" type="email" name="email" id="email" required maxlength="255" placeholder="Enter email">
+        </label>
       </div>
+      <div class="contacts-form__bottom">
+        <label class="contacts-form__left">
+          <input class="input" type="text" name="subject" id="subject" required maxlength="255" placeholder="Enter subject">
+        </label>
+        <div class="contacts-form__selectors">
+          <button class="contacts-form__btn" type="button" data-content="general_inquiry">
+            <span>General Inquiry</span>
+          </button>
+          <button class="contacts-form__btn" type="button" data-content="booking_issue">
+            <span>Booking Issue</span>
+          </button>
+          <button class="contacts-form__btn active" type="button" data-content="refund_request">
+            <span>Refund Request</span>
+          </button>
+          <button class="contacts-form__btn" type="button" data-content="other">
+            <span>Other</span>
+          </button>
+        </div>
+      </div>
+      <label>
+        <textarea class="input textarea" name="message" id="message" required minlength="60" maxlength="1500"
+                  placeholder="Enter message"></textarea>
+      </label>
+      <div class="contacts-form__send">
+        <button class="contacts-form__send-btn btn" type="submit">
+          <span>Send Message</span>
+        </button>
+        <p>Our team will respond within 24 hours</p>
+      </div>
+    </form>
+  </div>
+</section>
+  <section class="cta indent">
+  <div class="container">
+    <div class="cta__content">
+      <h2 class="cta__title title-section title-section--big">
+        Contact Support Now
+      </h2>
+      <p class="cta__text">
+        We’re available 24/7 to assist you
+      </p>
+      <button class="cta__btn btn" type="button">
+        <span>Get Started Now</span>
+      </button>
     </div>
   </div>
 </section>

@@ -1,0 +1,39 @@
+.guarantees-choose {
+  &__inner {
+    padding: 48px 36px;
+    @include flex-align-center(30);
+    border-radius: 24px;
+    border: 1px solid #FFB834;
+    background: #FFF;
+  }
+
+  &__title {
+    font-size: 44px;
+    font-family: $inter;
+    font-weight: 600;
+    color: #3D3D3D;
+    max-width: 300px;
+  }
+
+  &__list {
+    @include flex-column(20);
+  }
+
+  &__item {
+    @include flex-align-center(15);
+    color: #4A4A4A;
+    font-size: 24px;
+    font-family: $inter;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $accent
+    }
+  }
+}

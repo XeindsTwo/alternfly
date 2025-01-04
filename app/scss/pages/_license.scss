@@ -1,0 +1,48 @@
+.license {
+  &__title {
+    font-size: 72px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+
+  &__items {
+    @include flex-column(36);
+  }
+
+  &__item {
+    @include flex-column(24);
+    padding: 40px 35px;
+    border-radius: 20px;
+    border: 1px solid #FFB834;
+    background: #FFF;
+  }
+
+  &__name {
+    font-size: 22px;
+    color: #4A4A4A;
+    font-family: $inter;
+    font-weight: 600;
+  }
+
+  &__text {
+    max-width: 1240px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #7A7A7A;
+
+    a {
+      border: 1px solid transparent;
+      border-radius: 4px;
+      transition: color .4s, background-color .4s;
+
+      &:hover {
+        color: $orange100;
+      }
+
+      &:focus {
+        background-color: $orange100;
+        color: $white;
+      }
+    }
+  }
+}

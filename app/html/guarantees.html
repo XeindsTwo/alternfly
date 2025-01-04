@@ -1,0 +1,29 @@
+@include('components/_head.html', {
+title: 'AlternaFly | How It Works'
+})
+
+@include('components/_header.html')
+<main class="main">
+  <div class="container">
+    <h1 class="steps__title title-section">Our Guarantees</h1>
+    <p class="steps__subtext">Trust us to make your travel simple and secure</p>
+  </div>
+  @include('guarantees/_guarantees-steps.html')
+  @include('guarantees/_guarantees-choose.html')
+  @include('guarantees/_banner.html')
+  <section class="cta indent">
+    <div class="container">
+      <div class="cta__content">
+        <h2 class="cta__title title-section title-section--big">
+          Book with Confidence
+        </h2>
+        <p class="cta__text">
+          Experience the AlternaFly difference today
+        </p>
+        <button class="cta__btn btn" type="button">Get Started Now</button>
+      </div>
+    </div>
+  </section>
+</main>
+@include('components/_footer.html')
+<script src="js/main.min.js" type="module"></script>
