@@ -35,6 +35,15 @@
 
   &--small {
     font-size: 40px;
+    @include r($lg) {
+      font-size: 36px;
+    }
+    @include r($tablet) {
+      font-size: 34px;
+    }
+    @include r($phone) {
+      font-size: 31px;
+    }
   }
 
   &--big {

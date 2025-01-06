@@ -3,6 +3,21 @@
     font-size: 68px;
     text-align: center;
     margin-bottom: 24px;
+    @media (max-width: 1300px) {
+      font-size: 66px;
+    }
+    @include r($desktop) {
+      font-size: 60px;
+    }
+    @include r($lg) {
+      font-size: 56px;
+    }
+    @media (max-width: 880px) {
+      font-size: 52px;
+    }
+    @include r($sm) {
+      font-size: 48px;
+    }
   }
 
   &__subtext {
@@ -20,12 +35,47 @@
     border-radius: 24px;
     border: 1px solid #F0F0F0;
     background: linear-gradient(125deg, rgba(225, 224, 222, 0.15) 9.11%, rgba(231, 228, 226, 0.15) 90.89%);
+    @media (max-width: 1100px) {
+      min-height: 450px;
+      padding: 70px 0 70px 29px;
+    }
+    @include r($lg) {
+      padding-top: 45px;
+    }
+    @include r($sm) {
+      min-height: 420px;
+    }
+    @media (max-width: 530px) {
+      min-height: 390px;
+    }
+    @media (max-width: 500px) {
+      padding: 40px 20px 40px;
+      min-height: 380px;
+    }
+    @include r($sm) {
+      margin: 0 -6px;
+    }
   }
 
   &__content {
     max-width: 760px;
     position: relative;
     z-index: 11;
+    @media (max-width: 1300px) {
+      max-width: 720px;
+    }
+    @media (max-width: 1140px) {
+      max-width: 640px;
+    }
+    @media (max-width: 980px) {
+      max-width: 590px;
+    }
+    @media (max-width: 920px) {
+      max-width: 520px;
+    }
+    @media (max-width: 680px) {
+      max-width: 490px;
+    }
   }
 
   &__subtitle {
@@ -37,6 +87,13 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 32px;
+    @media (max-width: 1100px) {
+      font-size: 20px;
+    }
+    @media (max-width: 680px) {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
   }
 
   &__text {
@@ -46,12 +103,39 @@
     font-size: 36px;
     line-height: 1.18;
     margin-bottom: 32px;
+    @media (max-width: 1300px) {
+      font-size: 34px;
+    }
+    @media (max-width: 1140px) {
+      font-size: 30px;
+    }
+    @media (max-width: 980px) {
+      font-size: 28px;
+      margin-bottom: 44px;
+    }
+    @media (max-width: 680px) {
+      font-size: 26px;
+    }
+    @media (max-width: 530px) {
+      font-size: 24px;
+    }
+    @media (max-width: 440px) {
+      font-size: 22px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 385px) {
+      line-height: 1.3;
+    }
   }
 
   &__mission {
     font-weight: 500;
     max-width: 560px;
     line-height: 1.35;
+    @media (max-width: 920px) {
+      max-width: 420px;
+      line-height: 1.4;
+    }
   }
 
   &__decor {
@@ -59,12 +143,81 @@
     right: 0;
     bottom: 0;
     z-index: 5;
+    @media (max-width: 1400px) {
+      width: auto;
+      height: 370px;
+    }
+    @media (max-width: 1300px) {
+      right: -30px;
+    }
+    @media (max-width: 1220px) {
+      right: -80px;
+      height: 360px;
+    }
+    @media (max-width: 1050px) {
+      right: -140px;
+      height: 380px;
+    }
+    @media (max-width: 930px) {
+      right: -170px;
+    }
+    @media (max-width: 850px) {
+      height: 350px;
+    }
+    @include r($tablet) {
+      right: -240px;
+      height: 370px;
+      opacity: .8;
+    }
+    @include r($sm) {
+      right: -200px;
+      opacity: .7;
+    }
+    @media (max-width: 560px) {
+      height: 390px;
+    }
+    @media (max-width: 500px) {
+      right: -170px;
+      bottom: -40px;
+    }
+    @media (max-width: 425px) {
+      object-position: left bottom;
+      object-fit: cover;
+      right: -80px;
+      height: 90%;
+      bottom: -20px;
+      opacity: .6;
+    }
+    @media (max-width: 390px) {
+      right: -50px;
+      bottom: 0;
+    }
   }
 
   &__people {
+    @include objectCoverBg;
     position: absolute;
     right: 0;
     bottom: 0;
     z-index: 10;
+    @media (max-width: 1400px) {
+      width: auto;
+      height: 400px;
+    }
+    @media (max-width: 1300px) {
+      right: -30px;
+    }
+    @media (max-width: 1220px) {
+      right: -110px;
+    }
+    @media (max-width: 1050px) {
+      right: -150px;
+    }
+    @media (max-width: 850px) {
+      height: 380px;
+    }
+    @include r($tablet) {
+      display: none;
+    }
   }
 }

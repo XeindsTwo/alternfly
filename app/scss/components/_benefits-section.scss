@@ -1,4 +1,16 @@
 .benefits-section {
+  .title-section {
+    @media (max-width: 860px) {
+      font-size: 34px;
+    }
+    @media (max-width: 680px) {
+      font-size: 32px;
+    }
+    @media (max-width: 570px) {
+      font-size: 30px;
+    }
+  }
+
   &__list {
     display: flex;
     justify-content: center;
@@ -6,6 +18,15 @@
     gap: 20px 24px;
     max-width: 1020px;
     margin: 0 auto;
+    @media (max-width: 1400px) {
+      max-width: 960px;
+    }
+    @include r($desktop) {
+      max-width: 860px;
+    }
+    @include r($tablet) {
+      gap: 16px 16px;
+    }
   }
 
   &__item {
@@ -20,6 +41,32 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media (max-width: 1400px) {
+      font-size: 22px;
+    }
+    @include r($desktop) {
+      font-size: 20px;
+      padding: 18px 40px;
+      box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.03) inset;
+    }
+    @media (max-width: 900px) {
+      font-size: 18px;
+    }
+    @include r($tablet) {
+      padding: 17px 35px;
+    }
+    @media (max-width: 680px) {
+      box-shadow: none;
+    }
+    @media (max-width: 575px) {
+      padding: 17px 28px;
+    }
+    @media (max-width: 530px) {
+      font-size: 17px;
+    }
+    @media (max-width: 430px) {
+      padding: 16px 28px;
+    }
 
     &.primary {
       border-radius: 72px;
