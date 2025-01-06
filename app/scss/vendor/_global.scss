@@ -57,7 +57,7 @@
     opacity: 0;
     visibility: hidden;
     background-color: rgba(#000, .65);
-    transition: opacity .4s, visibility .4s;
+    transition: opacity .6s, visibility .6s;
   }
 
   &--height {
@@ -85,7 +85,7 @@
     margin-bottom: 90px;
   }
   @include r($phone) {
-    margin-bottom: 70px;
+    margin-bottom: 80px;
   }
 }
 

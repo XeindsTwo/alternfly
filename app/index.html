@@ -5,12 +5,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
+  <meta
+      name="description"
+      content="
+        AlternaFly offers affordable flight bookings with up to 30% savings, personalized service, and
+        24/7 support. Get your ticket within 24 hours!
+      "
+  >
   <meta http-equiv="content-type" content="public, max-age=3600">
   <meta name="theme-color" content="#fff">
   <title>AlternaFly</title>
-  <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="shortcut icon" href="/images/icons/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.min.css">
 </head>
 <body class="body">
 
@@ -55,43 +61,69 @@
         </ul>
       </nav>
       <div class="header__right">
-        <button class="btn" type="button">
+        <a class="header__btn btn" type="button" href="/">
           <span>Submit a Request</span>
+        </a>
+        <button class="menu-btn menu-btn--header" type="button">
+          <span class="menu-btn__line"></span>
+          <span class="sr-only">Взаимодействовать с меню</span>
         </button>
       </div>
-      <button class="menu-btn menu-btn--header" style="display:none;" type="button">
-        <span class="menu-btn__line"></span>
-        <span class="sr-only">Взаимодействовать с меню</span>
-      </button>
     </div>
+  </div>
+  <div class="header__mobile">
+    <nav class="header__nav mobile">
+      <ul class="header__list">
+        <li>
+          <a class="header__link" href="about.html">
+            About Us
+          </a>
+        </li>
+        <li>
+          <a class="header__link" href="how-works.html">
+            How It Works
+          </a>
+        </li>
+        <li>
+          <a class="header__link" href="guarantees.html">
+            Guarantees
+          </a>
+        </li>
+        <li>
+          <a class="header__link" href="contacts.html">
+            Contact Us
+          </a>
+        </li>
+        <li>
+          <a class="header__link" href="faq.html">
+            FAQ
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
 <main class="main">
-  <section class="home indent" id="home">
-  <div class="container">
-
-  </div>
-</section>
   <section class="how-works indent">
   <div class="container">
     <h2 class="title-section title-section--center">How AlternaFly Works?</h2>
     <ul class="how-works__items">
       <li class="how-works__item">
-        <img class="how-works__img" width="192" height="196" src="images/how-works/1.png" alt="Submit Your Request">
+        <img class="how-works__img" width="192" height="196" src="images/how-works/1.webp" alt="Submit Your Request">
         <h3 class="how-works__name">Submit Your Request</h3>
-        <p class="how-works__text">
+        <p class="how-works__text short">
           Fill out a short form with your travel details.
         </p>
       </li>
       <li class="how-works__item">
-        <img class="how-works__img" width="181" height="196" src="images/how-works/2.png" alt="We Find the Best Options">
+        <img class="how-works__img" width="181" height="196" src="images/how-works/2.webp" alt="We Find the Best Options">
         <h3 class="how-works__name">We Find the Best Options</h3>
         <p class="how-works__text">
           Our specialists manually select the best flights with a 30% discount off the standard price.
         </p>
       </li>
       <li class="how-works__item">
-        <img class="how-works__img" width="192" height="196" src="images/how-works/3.png" alt="Receive Your Ticket">
+        <img class="how-works__img" width="192" height="196" src="images/how-works/3.webp" alt="Receive Your Ticket">
         <h3 class="how-works__name">Receive Your Ticket</h3>
         <p class="how-works__text">
           Pay and receive your ticket in your inbox within 24 hours.
@@ -309,6 +341,15 @@
     <div class="reviews__scrollbar"></div>
   </div>
 </section>
+  <div class="modal" id="modal-success">
+  <h3 class="modal__title">Thank You!</h3>
+  <p class="modal__subtext">
+    Your request has been successfully submitted! We will contact you shortly
+  </p>
+  <button class="btn" type="button">
+    <span>Close Modal</span>
+  </button>
+</div>
 </main>
 <footer class="footer">
   <div class="container">

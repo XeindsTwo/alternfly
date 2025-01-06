@@ -1,8 +1,25 @@
 .how-works {
+  .title-section {
+    @media (max-width: 385px) {
+      font-size: 26px;
+    }
+  }
+
   &__items {
     grid-gap: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 1050px) {
+      grid-gap: 15px;
+    }
+    @media (max-width: 850px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 525px) {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 320px;
+      margin: 0 auto;
+    }
   }
 
   &__item {
@@ -14,10 +31,66 @@
     border-radius: 19px;
     border: 1px solid #F5F1ED;
     background: linear-gradient(180deg, rgba(255, 249, 245, 0.98) 0%, rgba(255, 253, 251, 0.98) 100%);
+    @include r($desktop) {
+      padding: 43px 20px;
+    }
+    @include r($lg) {
+      border-radius: 15px;
+      padding: 38px 20px 26px;
+    }
+
+    &:last-child {
+      @media (max-width: 850px) {
+        grid-column: span 2;
+        max-width: 410px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      @media (max-width: 680px) {
+        max-width: 370px;
+      }
+      @media (max-width: 560px) {
+        max-width: 320px;
+      }
+      @media (max-width: 525px) {
+        grid-column: span 1;
+      }
+    }
   }
 
   &__img {
+    @include objectCoverBg;
     margin-bottom: 65px;
+    @media (max-width: 1350px) {
+      width: auto;
+      height: 184px;
+    }
+    @media (max-width: 1300px) {
+      height: 176px;
+    }
+    @include r($desktop) {
+      height: 165px;
+    }
+    @media (max-width: 1050px) {
+      height: 150px;
+    }
+    @include r($lg) {
+      height: 140px;
+      margin-bottom: 50px;
+    }
+    @media (max-width: 910px) {
+      height: 130px;
+    }
+    @include r($tablet) {
+      height: 120px;
+      margin-bottom: 40px;
+    }
+    @include r($sm) {
+      height: 115px;
+    }
+    @include r($phone) {
+      height: 107px;
+    }
   }
 
   &__name {
@@ -26,11 +99,49 @@
     font-size: 28px;
     font-family: $inter;
     margin-bottom: 24px;
+    @media (max-width: 1300px) {
+      font-size: 26px;
+    }
+    @media (max-width: 1050px) {
+      font-size: 24px;
+      line-height: 1.4;
+      max-width: 220px;
+    }
+    @include r($sm) {
+      font-size: 22px;
+    }
+    @media (max-width: 525px) {
+      font-size: 24px;
+    }
+    @media (max-width: 390px) {
+      font-size: 22px;
+    }
   }
 
   &__text {
     font-size: 20px;
     font-weight: 500;
     max-width: 380px;
+    @include r($desktop) {
+      font-size: 18px;
+      max-width: 290px;
+    }
+    @media (max-width: 910px) {
+      font-size: 17px;
+    }
+    @media (max-width: 580px) {
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    &.short {
+      max-width: 300px;
+      @include r($desktop) {
+        max-width: 230px;
+      }
+      @media (max-width: 850px) {
+        max-width: 215px;
+      }
+    }
   }
 }

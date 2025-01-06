@@ -18,6 +18,9 @@
     @include r($sm) {
       font-size: 48px;
     }
+    @include r($phone) {
+      font-size: 44px;
+    }
   }
 
   &__subtext {

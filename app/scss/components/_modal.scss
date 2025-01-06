@@ -1,0 +1,78 @@
+.modal {
+  @include topLeft50;
+  position: fixed;
+  max-width: 420px;
+  max-height: 90vh;
+  width: 96%;
+  padding: 40px 24px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 50;
+  border-radius: 16px;
+  background: #f6f6f6;
+  box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
+  transform: translate(-50%, -25%);
+  transition: transform .45s ease-in-out, visibility .4s, opacity .4s;
+  @media (max-width: 800px) {
+    padding: 30px 24px;
+  }
+  @media (max-width: 415px) {
+    width: 95%;
+    padding: 35px 20px 32px;
+  }
+  @media (max-height: 680px) {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.active {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__title {
+    font-family: $inter;
+    line-height: 1.1;
+    font-weight: 600;
+    font-size: 36px;
+    color: #181818;
+    margin-bottom: 30px;
+    @media (max-width: 800px) {
+      font-size: 34px;
+    }
+    @include r($sm) {
+      font-size: 32px;
+    }
+    @media (max-width: 530px) {
+      font-size: 34px;
+    }
+    @media (max-width: 415px) {
+      font-size: 30px;
+    }
+
+    span {
+      color: rgba(#2c2c3c, .3);
+    }
+  }
+
+  &__subtext {
+    color: #5b5b5b;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 500;
+    margin-bottom: 32px;
+    @include r($sm) {
+      font-size: 17px;
+      max-width: 320px;
+    }
+  }
+
+  &__top {
+    margin-bottom: 32px;
+  }
+}

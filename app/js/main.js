@@ -36,3 +36,16 @@ new Swiper('.reviews__swiper', {
     }
   }
 })
+
+const html = document.documentElement;
+const body = document.body;
+const menuBtn = document.querySelector('.menu-btn');
+const headerMobile = document.querySelector('.header__mobile');
+
+menuBtn.addEventListener('click', () => {
+  menuBtn.blur();
+  html.classList.toggle('active');
+  body.classList.toggle('active');
+  menuBtn.classList.toggle('active');
+  headerMobile.classList.toggle('active');
+});

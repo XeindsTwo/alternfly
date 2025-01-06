@@ -1,21 +1,56 @@
 .header {
   padding: 27px 0;
   margin-bottom: 90px;
+  @media (max-width: 1300px) {
+    margin-bottom: 70px;
+    padding: 23px 0;
+  }
   @include r($desktop) {
     margin-bottom: 80px;
   }
   @include r($lg) {
     margin-bottom: 65px;
   }
+  @include r($tablet) {
+    padding: 20px 0;
+  }
+  @media (max-width: 520px) {
+    margin-bottom: 50px;
+  }
 
   &__inner {
     @include flex-between-center-gap(30);
+    @include r($sm) {
+      position: relative;
+      z-index: 100;
+    }
+  }
+
+  &__nav {
+    @media (max-width: 1100px) {
+      display: none;
+    }
+
+    &.mobile {
+      display: none;
+      @media (max-width: 1100px) {
+        display: block;
+      }
+    }
   }
 
   &__logo, &__right {
     display: flex;
+    align-items: center;
     max-width: 230px;
     width: 100%;
+    @media (max-width: 1220px) {
+      max-width: 200px;
+    }
+    @media (max-width: 1100px) {
+      gap: 20px;
+      max-width: max-content;
+    }
   }
 
   &__right {
@@ -48,6 +83,23 @@
 
   &__list {
     @include flex-align-center(31);
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 35px;
+    }
+  }
+
+  &__btn {
+    @media (max-width: 1100px) {
+      padding: 14px 27px;
+    }
+    @include r($tablet) {
+      padding: 13px 24px;
+    }
+    @media (max-width: 520px) {
+      display: none;
+    }
   }
 
   &__link {
@@ -56,6 +108,15 @@
     padding: 1px 2px;
     border: 1px solid transparent;
     transition: color .4s, border .4s;
+    @media (max-width: 1220px) {
+      font-size: 18px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 20px;
+    }
+    @media (max-width: 440px) {
+      font-size: 19px;
+    }
 
     &:hover {
       color: $orange100;
@@ -64,6 +125,51 @@
     &:focus {
       border-color: $orange100;
       color: #3D3D3D;
+    }
+  }
+
+  &__mobile {
+    @include flex-column(30);
+    padding: 110px 25px 30px;
+    display: none;
+    pointer-events: none;
+    user-select: none;
+    position: fixed;
+    z-index: 25;
+    top: 0;
+    left: 0;
+    width: 40%;
+    background-color: #f3f3f3;
+    transform: translateX(300%);
+    height: 100vh;
+    transition: transform .7s ease-in-out;
+    @media (max-width: 1100px) {
+      display: flex;
+      align-items: flex-start;
+      pointer-events: auto;
+      user-select: auto;
+    }
+    @media (max-width: 860px) {
+      width: 60%;
+    }
+    @media (max-width: 610px) {
+      padding-top: 120px;
+      padding-left: 18px;
+      width: 100%;
+      transform: translateX(100%);
+    }
+    @media (max-width: 515px) {
+      padding-left: 16px;
+    }
+
+    &.active {
+      transform: translateX(150%);
+      @media (max-width: 860px) {
+        transform: translateX(80%);
+      }
+      @include r($sm) {
+        transform: translateX(0);
+      }
     }
   }
 }
