@@ -1,8 +1,32 @@
 .faq {
+  &__title {
+    br {
+      display: none;
+      @media (max-width: 720px) {
+        display: block;
+      }
+    }
+  }
+
   &__inner {
     padding: 44px 36px;
     border-radius: 28px;
     background: linear-gradient(125deg, rgba(189, 189, 189, 0.10) 9.11%, rgba(156, 156, 156, 0.10) 90.89%);
+    @media (max-width: 1100px) {
+      padding: 39px 30px;
+    }
+    @media (max-width: 860px) {
+      margin: 0 -5px;
+    }
+    @include r($tablet) {
+      padding: 37px 24px;
+    }
+    @include r($phone) {
+      padding: 34px 20px;
+    }
+    @media (max-width: 400px) {
+      padding: 32px 17px;
+    }
   }
 
   &__subtext {
@@ -34,6 +58,9 @@
 
   &__list {
     @include flex-column(20);
+    @media (max-width: 530px) {
+      gap: 16px;
+    }
   }
 
   &__head {
@@ -45,6 +72,15 @@
     border-radius: 15px;
     border: 1px solid $orange100;
     background: linear-gradient(90deg, #FCFBFA 4.1%, #F9F8F7 95.9%);
+    @media (max-width: 860px) {
+      padding: 22px 21px;
+    }
+    @include r($sm) {
+      border-radius: 12px;
+    }
+    @include r($phone) {
+      padding: 20px 18px;
+    }
 
     &:hover {
       color: $orange100;
@@ -65,8 +101,12 @@
     font-family: $inter;
     font-size: 22px;
     font-weight: 500;
+    line-height: 1.4;
     transition: color .4s;
-    @include r($sm) {
+    @media (max-width: 1100px) {
+      font-size: 20px;
+    }
+    @media (max-width: 860px) {
       font-size: 18px;
     }
     @include r($phone) {
@@ -103,6 +143,18 @@
     padding: 24px 25px;
     font-weight: 500;
     color: #7A7A7A;
+    line-height: 1.4;
     letter-spacing: -0.18px;
+    @media (max-width: 1100px) {
+      font-size: 18px;
+    }
+    @media (max-width: 860px) {
+      font-size: 17px;
+      padding: 22px 21px;
+    }
+    @include r($phone) {
+      font-size: 16px;
+      padding: 20px 17px;
+    }
   }
 }

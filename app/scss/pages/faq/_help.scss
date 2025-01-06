@@ -10,10 +10,49 @@
     border: 2px solid #FFB834;
     overflow: hidden;
     background: linear-gradient(90deg, #FCFBFA 4.1%, #F9F8F7 95.9%), #FFF;
+    @media (max-width: 1300px) {
+      min-height: 400px;
+    }
+    @media (max-width: 1150px) {
+      border-radius: 20px;
+      min-height: 380px;
+      padding-left: 30px;
+    }
+    @include r($lg) {
+      min-height: 350px;
+    }
+    @include r($tablet) {
+      border-width: 1px;
+      border-radius: 16px;
+    }
+    @include r($sm) {
+      padding-left: 24px;
+    }
+    @media (max-width: 530px) {
+      min-height: 340px;
+      padding-left: 0;
+    }
+    @include r($phone) {
+      margin: 0 -6px;
+    }
   }
 
   &__content {
     max-width: 455px;
+    @include r($desktop) {
+      max-width: 400px;
+    }
+    @media (max-width: 880px) {
+      max-width: 360px;
+    }
+    @include r($tablet) {
+      position: relative;
+      z-index: 5;
+    }
+    @media (max-width: 530px) {
+      text-align: center;
+      margin: 0 auto;
+    }
   }
 
   &__title {
@@ -22,6 +61,36 @@
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 32px;
+    @media (max-width: 1300px) {
+      font-size: 54px;
+    }
+    @include r($desktop) {
+      font-size: 50px;
+    }
+    @include r($lg) {
+      font-size: 44px;
+      line-height: 1.15;
+    }
+    @media (max-width: 880px) {
+      font-size: 40px;
+    }
+    @media (max-width: 680px) {
+      font-size: 38px;
+      max-width: 280px;
+    }
+    @include r($sm) {
+      font-size: 36px;
+    }
+    @media (max-width: 530px) {
+      text-align: center;
+    }
+    @include r($phone) {
+      font-size: 34px;
+      line-height: 1.2;
+    }
+    @media (max-width: 395px) {
+      font-size: 32px;
+    }
   }
 
   &__text {
@@ -32,6 +101,19 @@
   &__link {
     padding: 15px 18px;
     min-width: 300px;
+    @include r($desktop) {
+      min-width: 270px;
+    }
+    @include r($tablet) {
+      min-width: 250px;
+    }
+    @include r($sm) {
+      min-width: 240px;
+      padding: 14px 18px;
+    }
+    @media (max-width: 530px) {
+      min-width: 230px;
+    }
   }
 
   &__img {
@@ -39,5 +121,43 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    @media (max-width: 1300px) {
+      width: auto;
+      height: 390px;
+    }
+    @media (max-width: 1150px) {
+      height: 370px;
+    }
+    @media (max-width: 1100px) {
+      height: 360px;
+    }
+    @include r($lg) {
+      right: -70px;
+      height: 340px;
+    }
+    @media (max-width: 910px) {
+      height: 330px;
+      right: -75px;
+    }
+    @media (max-width: 850px) {
+      right: -110px;
+    }
+    @media (max-width: 880px) {
+      height: 320px;
+    }
+    @include r($tablet) {
+      opacity: .6;
+    }
+    @media (max-width: 680px) {
+      height: 300px;
+      right: -130px;
+    }
+    @include r($sm) {
+      height: 90%;
+      opacity: .3;
+    }
+    @media (max-width: 400px) {
+      right: -100px;
+    }
   }
 }

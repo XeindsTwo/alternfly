@@ -1,6 +1,12 @@
 .header {
   padding: 27px 0;
   margin-bottom: 90px;
+  @include r($desktop) {
+    margin-bottom: 80px;
+  }
+  @include r($lg) {
+    margin-bottom: 65px;
+  }
 
   &__inner {
     @include flex-between-center-gap(30);

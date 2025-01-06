@@ -2,11 +2,20 @@
   &__top {
     @include flex-between-center-gap(30);
     margin-bottom: 55px;
+    @include r($lg) {
+      flex-direction: column;
+      gap: 30px;
+      align-items: flex-start;
+    }
   }
 
   &__list {
     @include flex-align-center(30);
+    gap: 20px 30px;
     flex-wrap: wrap;
+    @include r($phone) {
+      gap: 20px 20px;
+    }
   }
 
   &__link {
@@ -14,6 +23,9 @@
     border-radius: 4px;
     border: 1px solid transparent;
     transition: color .4s, border .4s;
+    @include r($phone) {
+      font-size: 16px;
+    }
 
     &:hover {
       color: $orange100;
@@ -49,5 +61,12 @@
     font-weight: 500;
     font-size: 18px;
     margin-bottom: 25px;
+    @include r($lg) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    @include r($sm) {
+      font-size: 14px;
+    }
   }
 }

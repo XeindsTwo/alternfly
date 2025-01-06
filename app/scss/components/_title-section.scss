@@ -5,6 +5,29 @@
   font-weight: 600;
   margin-bottom: 44px;
   letter-spacing: 0.8px;
+  @include r($desktop) {
+    font-size: 40px;
+  }
+  @include r($lg) {
+    font-size: 36px;
+  }
+  @media (max-width: 860px) {
+    font-size: 32px;
+  }
+  @media (max-width: 680px) {
+    font-size: 30px;
+  }
+  @media (max-width: 560px) {
+    font-size: 28px;
+    margin-bottom: 38px;
+    letter-spacing: 0.4px;
+  }
+  @media (max-width: 430px) {
+    font-size: 26px;
+  }
+  @media (max-width: 385px) {
+    font-size: 24px;
+  }
 
   &--center {
     text-align: center;
@@ -16,5 +39,26 @@
 
   &--big {
     font-size: 52px;
+    @include r($desktop) {
+      font-size: 48px;
+    }
+    @include r($lg) {
+      font-size: 44px;
+    }
+    @media (max-width: 840px) {
+      font-size: 40px;
+    }
+    @include r($tablet) {
+      font-size: 38px;
+    }
+    @media (max-width: 560px) {
+      font-size: 36px;
+    }
+    @media (max-width: 510px) {
+      font-size: 34px;
+    }
+    @media (max-width: 445px) {
+      font-size: 32px;
+    }
   }
 }

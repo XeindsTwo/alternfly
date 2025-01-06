@@ -1,9 +1,50 @@
 .contacts-form {
+  .title-section {
+    @media (max-width: 560px) {
+      font-size: 30px;
+    }
+    @media (max-width: 485px) {
+      font-size: 28px;
+    }
+    @media (max-width: 410px) {
+      font-size: 27px;
+    }
+    @media (max-width: 400px) {
+      font-size: 26px;
+    }
+    @media (max-width: 375px) {
+      font-size: 25px;
+    }
+  }
+
   &__inner {
     padding: 52px 65px;
     border-radius: 24px;
     border: 2px solid #FFB834;
     background: linear-gradient(90deg, #FCFBFA 4.1%, #F9F8F7 95.9%), #FFF;
+    @media (max-width: 1400px) {
+      padding: 44px 55px;
+    }
+    @media (max-width: 1250px) {
+      padding: 40px 40px;
+    }
+    @include r($desktop) {
+      border-width: 1px;
+    }
+    @include r($lg) {
+      border-radius: 20px;
+    }
+    @media (max-width: 860px) {
+      background: transparent;
+      padding: 37px 27px;
+    }
+    @include r($sm) {
+      margin: 0 -5px;
+      padding: 37px 24px;
+    }
+    @media (max-width: 385px) {
+      padding: 37px 20px;
+    }
   }
 
   &__top {
@@ -11,17 +52,35 @@
     grid-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 20px;
+    @media (max-width: 540px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__bottom {
     @include flex-align-center(30);
     align-items: stretch;
     margin-bottom: 36px;
+    @include r($desktop) {
+      display: grid;
+      grid-gap: 30px 20px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include r($tablet) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__left {
     max-width: 415px;
     width: 100%;
+    @media (max-width: 1400px) {
+      max-width: 385px;
+    }
+    @include r($desktop) {
+      max-width: 100%;
+    }
   }
 
   &__selectors {
@@ -29,6 +88,15 @@
     width: 100%;
     grid-gap: 13px;
     grid-template-columns: repeat(4, 1fr);
+    @include r($desktop) {
+      grid-column: span 2;
+      min-height: 58px;
+    }
+    @include r($tablet) {
+      grid-column: span 1;
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__btn {
@@ -42,6 +110,22 @@
     position: relative;
     border: 1px solid rgba($orange100, .6);
     transition: background-color .4s, border .4s, color .4s;
+    @include r($tablet) {
+      min-height: 54px;
+    }
+    @include r($sm) {
+      padding: 12px 25px;
+    }
+    @include r($phone) {
+      min-height: 52px;
+      font-size: 15px;
+    }
+    @media (max-width: 420px) {
+      padding: 12px 22px;
+    }
+    @media (max-width: 400px) {
+      font-size: 14px;
+    }
 
     &:hover {
       border-color: #3D3D3D;

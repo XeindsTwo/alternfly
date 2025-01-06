@@ -1,13 +1,41 @@
 .chat {
   &__inner {
     @include flex-between-center-gap(30);
+    align-items: flex-end;
     margin: 0 60px;
+    @media (max-width: 1250px) {
+      margin: 0 30px;
+    }
+    @media (max-width: 1080px) {
+      margin: 0 20px;
+    }
+    @include r($lg) {
+      gap: 60px;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+    @media (max-width: 495px) {
+      margin: 0;
+    }
+    @media (max-width: 400px) {
+      gap: 50px;
+    }
   }
 
   &__content {
     @include flex-column(32);
     align-items: flex-start;
     max-width: 560px;
+    @media (max-width: 1250px) {
+      max-width: 490px;
+    }
+    @include r($lg) {
+      align-items: center;
+    }
+    @include r($tablet) {
+      max-width: 390px;
+    }
   }
 
   &__title {
@@ -16,9 +44,52 @@
     line-height: 1.2;
     font-weight: 600;
     color: #3D3D3D;
+    @media (max-width: 1250px) {
+      font-size: 44px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 40px;
+    }
+    @include r($tablet) {
+      font-size: 36px;
+    }
+    @include r($sm) {
+      font-size: 32px;
+    }
+    @media (max-width: 400px) {
+      font-size: 30px;
+    }
   }
 
   &__link {
     min-width: 280px;
+    @media (max-width: 410px) {
+      min-width: 250px;
+    }
+  }
+
+  &__img {
+    @media (max-width: 1150px) {
+      width: auto;
+      height: 240px;
+    }
+    @media (max-width: 1080px) {
+      height: 220px;
+    }
+    @media (max-width: 1030px) {
+      height: 210px;
+    }
+    @include r($tablet) {
+      height: 200px;
+    }
+    @include r($sm) {
+      height: 190px;
+    }
+    @media (max-width: 500px) {
+      height: 180px;
+    }
+    @include r($phone) {
+      height: 170px;
+    }
   }
 }

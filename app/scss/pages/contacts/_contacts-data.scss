@@ -1,7 +1,45 @@
 .contacts-data {
+  &__main-title {
+    @include r($phone) {
+      font-size: 44px;
+    }
+    @media (max-width: 395px) {
+      font-size: 42px;
+    }
+  }
+
   &__inner {
     @include flex-between-center-gap(30);
     padding: 44px 36px;
+    margin-bottom: 145px;
+    @media (max-width: 1350px) {
+      margin-bottom: 120px;
+    }
+    @media (max-width: 1300px) {
+      padding: 34px 26px;
+    }
+    @include r($desktop) {
+      margin-bottom: 90px;
+      align-items: flex-end;
+    }
+    @media (max-width: 1140px) {
+      padding: 26px 20px;
+    }
+    @media (max-width: 1100px) {
+      padding: 0;
+      margin-bottom: 80px;
+    }
+    @include r($lg) {
+      flex-direction: column;
+      gap: 45px;
+      align-items: flex-start;
+    }
+    @include r($sm) {
+      gap: 37px;
+    }
+    @include r($phone) {
+      gap: 32px;
+    }
   }
 
   &__title {
@@ -9,14 +47,54 @@
     font-family: $inter;
     font-weight: 700;
     color: #3D3D3D;
+    @include r($desktop) {
+      font-size: 40px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 36px;
+    }
+    @include r($lg) {
+      font-size: 32px;
+    }
+    @include r($tablet) {
+      font-size: 30px;
+    }
+    @include r($sm) {
+      font-size: 28px;
+    }
+    @include r($phone) {
+      font-size: 26px;
+    }
   }
 
   &__items {
     @include flex-align-center(140);
+    @media (max-width: 1300px) {
+      gap: 100px;
+    }
+    @include r($desktop) {
+      gap: 85px;
+    }
+    @media (max-width: 1170px) {
+      gap: 65px;
+    }
+    @include r($lg) {
+      align-items: flex-start;
+    }
+    @media (max-width: 730px) {
+      gap: 55px;
+    }
+    @include r($sm) {
+      gap: 30px;
+      flex-direction: column;
+    }
   }
 
   &__item {
     @include flex-column(12);
+    @include r($sm) {
+      gap: 8px;
+    }
   }
 
   &__label {
@@ -31,6 +109,12 @@
     border-radius: 4px;
     border: 1px solid transparent;
     transition: color .4s, border .4s;
+    @include r($sm) {
+      font-size: 18px;
+    }
+    @include r($phone) {
+      font-size: 17px;
+    }
 
     &:hover {
       color: $orange100;

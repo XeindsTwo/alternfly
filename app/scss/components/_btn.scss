@@ -1,5 +1,6 @@
 .btn {
-  padding: 12px 29px;
+  @include flex-center;
+  padding: 15px 29px;
   border-radius: 9px;
   overflow: hidden;
   color: $white;
